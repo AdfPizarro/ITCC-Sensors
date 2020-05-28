@@ -25,7 +25,7 @@ void setup() {
   const int TouchPin=D1;
   Serial.begin(9600);
   delay(7000);
-  Serial.println(" -- ITCC --");
+  Serial.println(" -- VOLANT S.A. de C.V. --");
   Serial.println("");
   String thisBoard= ARDUINO_BOARD;
   Serial.println(thisBoard);
@@ -55,7 +55,8 @@ void setup() {
 }
 
   boolean flag=true;
-void loop() {
+  
+  void loop() {
   timeClient.update();
   unsigned long epochTime = timeClient.getEpochTime();
   struct tm *ptm = gmtime ((time_t *)&epochTime); 
